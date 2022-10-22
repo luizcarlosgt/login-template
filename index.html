@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* margin: 0px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 130vh;
+        }
+
+        .dwl{
+            display: none;
+        }
+
+        select{
+            width: 200px;
+            height: 35px;
+            border: 2px solid rgb(230, 111, 208);
+            outline: none;
+        }
+
+        del{
+            color: rgb(215, 49, 210);
+        }
+
+        h3{
+            color: #107bd9;
+        }
+
+        mark{
+            color: rgb(216, 46, 196);
+        }
+
+        form output, span{
+            color: #107bd9;
+            text-shadow: 1px 1px 3px gray;
+        }
+
+        input[type='range']{
+            -webkit-appearance: none;  /* Override default CSS styles */
+            appearance: none;
+            width: 200px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: rgb(214, 65, 182);
+        }
+
+        form{
+            position: relative;
+            margin-top: 50px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Override default look */
+            appearance: none;
+            width: 15px; /* Set a specific slider handle width */
+            height: 15px; /* Slider handle height */
+            background: #3390e1; /* Green background */
+            cursor: pointer; /* Cursor on hover */
+            border-radius: 50%;
+            box-shadow: 3px 3px 5px gray;
+        }
+
+        header{
+            position: absolute;
+            top: 120px;
+            color: rgb(216, 36, 180);
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .menu{
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            background-color: rgb(210, 19, 210);
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        details p{
+            color: rgb(244, 166, 236);
+        }
+
+        details:hover, button:hover{
+            cursor: pointer;
+        }
+
+        button[type='submit']{
+            margin-top: 70px;
+            width: 300px;
+            height: 45px;
+            color: white;
+            border: 1px solid gray;
+            box-shadow: 3px 3px 7px gray;
+            animation: anim .5s alternate-reverse infinite;
+            transition: width .2s;
+        }
+        
+        button:hover{
+            animation: none;
+            background: rgb(243, 87, 251);
+            width: 310px;
+        }
+
+
+        .lang-opt input[type="checkbox"]{
+            margin-left: 25px;
+            accent-color: rgb(206, 45, 72);
+        }
+
+
+        input:hover{
+            cursor: pointer;
+        }
+        
+        @keyframes anim {
+            0%{
+                background: linear-gradient(to right, #e664db, #c80d93 0%);
+            }
+            10%{
+                background: linear-gradient(to right, #e664db, #c80d93 10%);
+            }
+            20%{
+                background: linear-gradient(to right, #e664db, #c80d93 20%);
+            }
+            30%{
+                background: linear-gradient(to right, #e664db, #c80d93 30%);
+            }
+            40%{
+                background: linear-gradient(to right, #e664db, #c80d93 40%);
+            }
+            50%{
+                background: linear-gradient(to right, #e664db, #c80d93 50%);
+            }
+            60%{
+                background: linear-gradient(to right, #e664db, #c80d93 60%);
+            }
+            70%{
+                background: linear-gradient(to right, #e664db, #c80d93 70%);
+            }
+            80%{
+                background: linear-gradient(to right, #e664db, #c80d93 80%);
+            }
+            90%{
+                background: linear-gradient(to right, #e664db, #c80d93 90%);
+            }
+            100%{
+                background: linear-gradient(to right, #e664db, #c80d93 100%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+    </ul>
+
+    <header>
+        <center><h1>My app of test</h1></center>
+    </header>
+    
+    <main>
+
+        <p>This is your options <del>have a good day.</del></p>
+        <br>
+    
+        <select name="" id="">
+            <optgroup label="FRUTAS">
+                <option value="laranja">LARANJA</option>
+                <option value="">BANANA</option>
+                <option value="">MAÇÃ</option>
+            </optgroup>
+    
+            <optgroup label="CARNES">
+                <option value="laranja">PICANHA</option>
+                <option value="">BISTECA</option>
+                <option value="">FILÉ</option>
+            </optgroup>
+        </select>
+    
+        <br><br>
+        
+        <h3>
+            Lebra de ver <mark> ONINPUT </mark> e <mark> OUTPUT </mark>
+        </h3>
+    
+        <form oninput="result.value=parseInt(b.value)">
+            <div class="range">
+                <span>0</span>
+                <input type="range" name="b" value="50" />
+                <output name="result">50</output>
+            </div>
+        </form>
+    
+        <div class="dwl">
+            <p>Baixar image</p>
+            <a href="" download="https://f.i.uol.com.br/fotografia/2021/02/18/1613671083602eaaab101f1_1613671083_3x2_md.jpg">Baixe aqui</a>    
+        </div>
+
+        <br><br>
+        <details>
+            <summary>Naruto Uzumaki</summary>
+            <p>This is naruto. Naruto is a ninja.</p>
+        </details>
+        <br><br>
+        <center><h3>Escolha sua <mark>linguagem !</mark></h3></center>
+        <br>
+        <div class="lang-opt">
+            <input type="checkbox" name="" id="ck-js">
+            <label for="ck-js">javascript</label>
+            <input type="checkbox" name="" id="ck">
+            <label for="ck-php">php</label>
+            <input type="checkbox" name="" id="ck">
+            <label for="ck">python</label>
+        </div>
+        <center>
+            <button type="submit">Enviar</button>
+        </center>
+    </main>
+
+
+    <script>
+        document.querySelector('button').addEventListener('click', function(){
+            alert('Thank you !')
+        });
+    </script>
+</body>
+</html>
